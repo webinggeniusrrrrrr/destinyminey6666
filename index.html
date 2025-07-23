@@ -7,9 +7,37 @@
  <meta name="monetag" content="147b0e5078f91f90225fdea406896e57">
 <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9613820,document.createElement('script'))</script>
 </head>
+<style>
+  body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1e1e1e;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
+#clock {
+  color: #00ffcc;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+</style>
 <body>
  <h1>make mama proud </h1>
+  <body>
+  <div id="clock"></div>
+  </body>
 </body>
+<script>
+  function updateClock() {
+  const now = new Date();
+  const timeString = now.toLocaleString(); // Date and time
+  document.getElementById('clock').textContent = timeString;
+}
 
+setInterval(updateClock, 1000);
+updateClock(); // Call once immediately
+</script>
 </html>
